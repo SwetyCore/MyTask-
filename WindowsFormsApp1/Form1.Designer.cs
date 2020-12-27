@@ -61,6 +61,7 @@ namespace WindowsFormsApp1
             this.label_Hello.TabIndex = 0;
             this.label_Hello.Text = "欢迎回来,";
             this.label_Hello.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Hello.Click += new System.EventHandler(this.label_Hello_Click);
             // 
             // label_NowTime
             // 

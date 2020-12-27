@@ -275,5 +275,9 @@ namespace WindowsFormsApp1
             CloseLCD();
         }
 
+        private void label_Hello_Click(object sender, EventArgs e)
+        {
+            Mymessage("https://github.com/SwetyCore/MyTask-");
+        }
     }
 }
