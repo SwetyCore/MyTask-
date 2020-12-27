@@ -71,10 +71,10 @@ namespace WindowsFormsApp1
             this.label_NowTime.ForeColor = System.Drawing.Color.Snow;
             this.label_NowTime.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label_NowTime.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label_NowTime.Location = new System.Drawing.Point(1, 819);
+            this.label_NowTime.Location = new System.Drawing.Point(1, 790);
             this.label_NowTime.Name = "label_NowTime";
             this.label_NowTime.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label_NowTime.Size = new System.Drawing.Size(583, 201);
+            this.label_NowTime.Size = new System.Drawing.Size(598, 230);
             this.label_NowTime.TabIndex = 1;
             this.label_NowTime.Text = "00:00";
             this.label_NowTime.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -133,9 +133,9 @@ namespace WindowsFormsApp1
             this.label_Timer.Font = new System.Drawing.Font("Digiface", 199.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Timer.ForeColor = System.Drawing.Color.Snow;
             this.label_Timer.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label_Timer.Location = new System.Drawing.Point(0, 340);
+            this.label_Timer.Location = new System.Drawing.Point(0, 323);
             this.label_Timer.Name = "label_Timer";
-            this.label_Timer.Size = new System.Drawing.Size(1920, 364);
+            this.label_Timer.Size = new System.Drawing.Size(1920, 381);
             this.label_Timer.TabIndex = 5;
             this.label_Timer.Text = "00:00";
             this.label_Timer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -180,7 +180,7 @@ namespace WindowsFormsApp1
             this.label_msg.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label_msg.Location = new System.Drawing.Point(70, 9);
             this.label_msg.Name = "label_msg";
-            this.label_msg.Size = new System.Drawing.Size(464, 71);
+            this.label_msg.Size = new System.Drawing.Size(560, 71);
             this.label_msg.TabIndex = 10;
             this.label_msg.Text = "This is a message!";
             this.label_msg.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;

@@ -11,16 +11,17 @@ using System.Threading;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Net;
-
+using System.Runtime.InteropServices;
 
 namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
         //显示器关闭
+        /*
         public const uint WM_SYSCOMMAND = 0x0112;
         public const uint SC_MONITORPOWER = 0xF170;
-        [System.Runtime.InteropServices.DllImport("user32")]
+        [DllImport("user32")]
         public static extern IntPtr SendMessage(IntPtr hWnd, uint wMsg, uint wParam, int lParam);
 
         void CloseLCD()
@@ -29,6 +30,11 @@ namespace WindowsFormsApp1
             SC_MONITORPOWER, 2); // 2 为关闭显示器， －1则打开显示器
         }
 
+        */
+
+        private static IntPtr HWND_BROADCAST = new IntPtr(65535);
+        [DllImport("user32.dll", EntryPoint = "PostMessageA")]
+        private static extern int PostMessage(IntPtr hWnd, uint Msg, IntPtr wParam, IntPtr lParam);
 
         public Form1()
         {
@@ -272,12 +278,13 @@ namespace WindowsFormsApp1
         private void label1_Click(object sender, EventArgs e)
         {
             Mymessage("关闭显示器!!!");
-            CloseLCD();
+            //CloseLCD();
+            Form1.PostMessage(Form1.HWND_BROADCAST, 274U, (IntPtr)61808, (IntPtr)2);
         }
 
         private void label_Hello_Click(object sender, EventArgs e)
         {
-            Mymessage("https://github.com/SwetyCore/MyTask-");
+            Mymessage("github.com/SwetyCore/MyTask-");
         }
     }
 }
