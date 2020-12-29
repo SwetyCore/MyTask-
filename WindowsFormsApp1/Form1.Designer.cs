@@ -35,7 +35,7 @@ namespace WindowsFormsApp1
             this.label_NowTime = new System.Windows.Forms.Label();
             this.label_NowDate = new System.Windows.Forms.Label();
             this.label_Saying = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox_Blur = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label_Timer = new System.Windows.Forms.Label();
             this.label_Start = new System.Windows.Forms.Label();
@@ -43,11 +43,15 @@ namespace WindowsFormsApp1
             this.label_msg = new System.Windows.Forms.Label();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.label_CloseLCD = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox_default = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Blur)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_default)).BeginInit();
             this.SuspendLayout();
             // 
             // label_Hello
             // 
+            this.label_Hello.AutoSize = true;
             this.label_Hello.BackColor = System.Drawing.Color.Transparent;
             this.label_Hello.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label_Hello.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -55,9 +59,9 @@ namespace WindowsFormsApp1
             this.label_Hello.ForeColor = System.Drawing.Color.Snow;
             this.label_Hello.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label_Hello.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label_Hello.Location = new System.Drawing.Point(2, 0);
+            this.label_Hello.Location = new System.Drawing.Point(729, 9);
             this.label_Hello.Name = "label_Hello";
-            this.label_Hello.Size = new System.Drawing.Size(1920, 74);
+            this.label_Hello.Size = new System.Drawing.Size(286, 83);
             this.label_Hello.TabIndex = 0;
             this.label_Hello.Text = "欢迎回来,";
             this.label_Hello.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -65,16 +69,17 @@ namespace WindowsFormsApp1
             // 
             // label_NowTime
             // 
+            this.label_NowTime.AutoSize = true;
             this.label_NowTime.BackColor = System.Drawing.Color.Transparent;
             this.label_NowTime.Cursor = System.Windows.Forms.Cursors.UpArrow;
             this.label_NowTime.Font = new System.Drawing.Font("Digiface", 120F);
             this.label_NowTime.ForeColor = System.Drawing.Color.Snow;
             this.label_NowTime.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label_NowTime.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label_NowTime.Location = new System.Drawing.Point(1, 790);
+            this.label_NowTime.Location = new System.Drawing.Point(0, 783);
             this.label_NowTime.Name = "label_NowTime";
             this.label_NowTime.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label_NowTime.Size = new System.Drawing.Size(598, 230);
+            this.label_NowTime.Size = new System.Drawing.Size(526, 244);
             this.label_NowTime.TabIndex = 1;
             this.label_NowTime.Text = "00:00";
             this.label_NowTime.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -84,42 +89,43 @@ namespace WindowsFormsApp1
             // 
             this.label_NowDate.AutoSize = true;
             this.label_NowDate.BackColor = System.Drawing.Color.Transparent;
-            this.label_NowDate.Font = new System.Drawing.Font("Digiface", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_NowDate.Font = new System.Drawing.Font(".萍方-简", 25.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_NowDate.ForeColor = System.Drawing.Color.Snow;
             this.label_NowDate.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label_NowDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label_NowDate.Location = new System.Drawing.Point(260, 1024);
+            this.label_NowDate.Location = new System.Drawing.Point(0, 1017);
             this.label_NowDate.Name = "label_NowDate";
-            this.label_NowDate.Size = new System.Drawing.Size(199, 52);
+            this.label_NowDate.Size = new System.Drawing.Size(225, 60);
             this.label_NowDate.TabIndex = 2;
             this.label_NowDate.Text = "2020/1/1";
             this.label_NowDate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label_Saying
             // 
+            this.label_Saying.AutoSize = true;
             this.label_Saying.BackColor = System.Drawing.Color.Transparent;
             this.label_Saying.Cursor = System.Windows.Forms.Cursors.UpArrow;
             this.label_Saying.Font = new System.Drawing.Font(".萍方-简", 15F);
             this.label_Saying.ForeColor = System.Drawing.Color.Snow;
             this.label_Saying.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label_Saying.Location = new System.Drawing.Point(645, 1002);
+            this.label_Saying.Location = new System.Drawing.Point(1730, 1036);
             this.label_Saying.Name = "label_Saying";
-            this.label_Saying.Size = new System.Drawing.Size(1263, 50);
+            this.label_Saying.Size = new System.Drawing.Size(178, 35);
             this.label_Saying.TabIndex = 3;
             this.label_Saying.Text = "点我获取一言~";
             this.label_Saying.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label_Saying.Click += new System.EventHandler(this.label4_Click);
             // 
-            // pictureBox1
+            // pictureBox_Blur
             // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1920, 1080);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            this.pictureBox_Blur.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox_Blur.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.pictureBox_Blur.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox_Blur.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox_Blur.Name = "pictureBox_Blur";
+            this.pictureBox_Blur.Size = new System.Drawing.Size(1920, 1080);
+            this.pictureBox_Blur.TabIndex = 4;
+            this.pictureBox_Blur.TabStop = false;
             // 
             // timer1
             // 
@@ -129,16 +135,18 @@ namespace WindowsFormsApp1
             // 
             // label_Timer
             // 
+            this.label_Timer.AutoSize = true;
             this.label_Timer.BackColor = System.Drawing.Color.Transparent;
-            this.label_Timer.Font = new System.Drawing.Font("Digiface", 199.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Timer.Cursor = System.Windows.Forms.Cursors.UpArrow;
+            this.label_Timer.Font = new System.Drawing.Font("Digiface", 190F);
             this.label_Timer.ForeColor = System.Drawing.Color.Snow;
             this.label_Timer.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label_Timer.Location = new System.Drawing.Point(0, 323);
+            this.label_Timer.Location = new System.Drawing.Point(466, 322);
             this.label_Timer.Name = "label_Timer";
-            this.label_Timer.Size = new System.Drawing.Size(1920, 381);
+            this.label_Timer.Size = new System.Drawing.Size(833, 386);
             this.label_Timer.TabIndex = 5;
             this.label_Timer.Text = "00:00";
-            this.label_Timer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Timer.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label_Timer.Click += new System.EventHandler(this.label5_Timer_Click);
             // 
             // label_Start
@@ -153,7 +161,7 @@ namespace WindowsFormsApp1
             this.label_Start.Size = new System.Drawing.Size(64, 65);
             this.label_Start.TabIndex = 7;
             this.label_Start.Text = "▶";
-            this.label_Start.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label_Start.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label_Start.Click += new System.EventHandler(this.label7_Start_Click);
             // 
             // label_stop
@@ -163,7 +171,7 @@ namespace WindowsFormsApp1
             this.label_stop.Font = new System.Drawing.Font("宋体", 22F);
             this.label_stop.ForeColor = System.Drawing.Color.Snow;
             this.label_stop.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label_stop.Location = new System.Drawing.Point(0, 145);
+            this.label_stop.Location = new System.Drawing.Point(0, 143);
             this.label_stop.Name = "label_stop";
             this.label_stop.Size = new System.Drawing.Size(64, 64);
             this.label_stop.TabIndex = 8;
@@ -198,13 +206,37 @@ namespace WindowsFormsApp1
             this.label_CloseLCD.Cursor = System.Windows.Forms.Cursors.UpArrow;
             this.label_CloseLCD.Font = new System.Drawing.Font("宋体", 35F);
             this.label_CloseLCD.ForeColor = System.Drawing.Color.Snow;
-            this.label_CloseLCD.Location = new System.Drawing.Point(0, 215);
+            this.label_CloseLCD.Location = new System.Drawing.Point(0, 208);
             this.label_CloseLCD.Name = "label_CloseLCD";
             this.label_CloseLCD.Size = new System.Drawing.Size(64, 64);
             this.label_CloseLCD.TabIndex = 11;
             this.label_CloseLCD.Text = "☼";
             this.label_CloseLCD.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label_CloseLCD.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // pictureBox_default
+            // 
+            this.pictureBox_default.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox_default.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox_default.Name = "pictureBox_default";
+            this.pictureBox_default.Size = new System.Drawing.Size(1920, 1080);
+            this.pictureBox_default.TabIndex = 12;
+            this.pictureBox_default.TabStop = false;
+            this.pictureBox_default.Click += new System.EventHandler(this.pictureBox_default_Click);
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Cursor = System.Windows.Forms.Cursors.UpArrow;
+            this.label1.Font = new System.Drawing.Font("宋体", 30F);
+            this.label1.ForeColor = System.Drawing.Color.Snow;
+            this.label1.Location = new System.Drawing.Point(0, 272);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(64, 64);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "◐";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // Form1
             // 
@@ -213,16 +245,18 @@ namespace WindowsFormsApp1
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label_Saying);
+            this.Controls.Add(this.label_NowDate);
+            this.Controls.Add(this.label_NowTime);
+            this.Controls.Add(this.label_Timer);
             this.Controls.Add(this.label_CloseLCD);
-            this.Controls.Add(this.label_msg);
             this.Controls.Add(this.label_stop);
             this.Controls.Add(this.label_Start);
-            this.Controls.Add(this.label_Timer);
-            this.Controls.Add(this.label_NowDate);
-            this.Controls.Add(this.label_Saying);
-            this.Controls.Add(this.label_NowTime);
+            this.Controls.Add(this.label_msg);
             this.Controls.Add(this.label_Hello);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBox_default);
+            this.Controls.Add(this.pictureBox_Blur);
             this.Cursor = System.Windows.Forms.Cursors.AppStarting;
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -232,7 +266,8 @@ namespace WindowsFormsApp1
             this.Text = "MainForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Blur)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_default)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -244,7 +279,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label_NowTime;
         private System.Windows.Forms.Label label_NowDate;
         private System.Windows.Forms.Label label_Saying;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox_Blur;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label_Timer;
         private System.Windows.Forms.Label label_Start;
@@ -252,6 +287,8 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label_msg;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Label label_CloseLCD;
+        private System.Windows.Forms.PictureBox pictureBox_default;
+        private System.Windows.Forms.Label label1;
     }
 }
 
